@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/themes": "^3.0.2",
     "clsx": "^2.1.0",
     "framer-motion": "^11.1.7",
     "next": "14.2.2",

@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "../../../utils/cn";
+import { cn } from "@utils/cn";
 
 export const BackgroundBeams = React.memo(
   ({ className }: { className?: string }) => {
     const paths = [
-      "M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
+      "M-180 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
       "M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867",
       "M-366 -205C-366 -205 -298 200 166 327C630 454 698 859 698 859",
       "M-359 -213C-359 -213 -291 192 173 319C637 446 705 851 705 851",
@@ -68,7 +68,7 @@ export const BackgroundBeams = React.memo(
           className=" z-0 h-full w-full pointer-events-none absolute "
           width="100%"
           height="100%"
-          viewBox="0 0 696 316"
+          viewBox="200 250 653 250"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -84,7 +84,7 @@ export const BackgroundBeams = React.memo(
               key={`path-` + index}
               d={path}
               stroke={`url(#linearGradient-${index})`}
-              strokeOpacity="0.4"
+              strokeOpacity="0.8"
               strokeWidth="0.5"
             ></motion.path>
           ))}
@@ -94,7 +94,7 @@ export const BackgroundBeams = React.memo(
                 id={`linearGradient-${index}`}
                 key={`gradient-${index}`}
                 initial={{
-                  x1: "0%",
+                  x1: "1%",
                   x2: "0%",
                   y1: "0%",
                   y2: "0%",
@@ -106,7 +106,7 @@ export const BackgroundBeams = React.memo(
                   y2: ["0%", `${93 + Math.random() * 8}%`],
                 }}
                 transition={{
-                  duration: Math.random() * 10 + 10,
+                  duration: Math.random() * 10 + 10 * Math.random() + 10,
                   ease: "easeInOut",
                   repeat: Infinity,
                   delay: Math.random() * 10,
