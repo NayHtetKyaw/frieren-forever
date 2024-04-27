@@ -163,7 +163,7 @@ const Glow = ({ delay }: { delay: number }) => {
       }}
       transition={{
         //chage the way start chage
-        duration: 5,
+        duration: 5.5,
         // duration: 3,
         ease: "easeInOut",
         delay: delay,
