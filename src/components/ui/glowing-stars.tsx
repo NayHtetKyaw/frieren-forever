@@ -126,11 +126,13 @@ const Star = ({ isGlowing, delay }: { isGlowing: boolean; delay: number }) => {
       initial={{
         scale: 1,
       }}
-      animate={{
-        // scale: isGlowing ? [1, 1.2, 2.5, 2.2, 1.5] : 1,
-        scale: [1, 1.2, 2.5, 2.2, 3, , 1.5],
-        // background: isGlowing ? "#fff" : "#666",
-      }}
+      animate={
+        {
+          // scale: isGlowing ? [1, 1.2, 2.5, 2.2, 1.5] : 1,
+          // scale: [1, 1.2, 2.5, 2.2, 3, , 1.5],
+          // background: isGlowing ? "#fff" : "#666",
+        }
+      }
       transition={{
         duration: 4,
         ease: "easeInOut",
@@ -161,8 +163,8 @@ const Glow = ({ delay }: { delay: number }) => {
       }}
       transition={{
         //chage the way start chage
-        // duration: 5,
-        duration: 3,
+        duration: 5,
+        // duration: 3,
         ease: "easeInOut",
         delay: delay,
       }}
