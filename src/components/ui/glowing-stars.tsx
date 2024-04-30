@@ -22,10 +22,6 @@ export const GlowingStarsBackgroundCard = ({
       onMouseLeave={() => {
         setMouseEnter(false);
       }}
-      // className={cn(
-      //   "bg-[linear-gradient(110deg,#333_0.6%,#222)] p-4 max-w-md max-h-[20rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600",
-      //   className,
-      // )}
     >
       <div className="flex justify-center items-center">
         <Illustration mouseEnter={mouseEnter} />
@@ -66,8 +62,6 @@ export const GlowingStarsTitle = ({
 export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
   const columns = 18;
   const stars = 108;
-  // const stars = Math.floor(Math.random() * 108);
-  // const columns = Math.floor(Math.random() * 18);
   const [glowingStars, setGlowingStars] = useState<number[]>([]);
 
   const highlightedStars = useRef<number[]>([]);
@@ -75,7 +69,7 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       highlightedStars.current = Array.from({ length: 5 }, () =>
-        Math.floor(Math.random() * stars),
+        Math.floor(Math.random() * stars)
       );
       // setGlowingStars([...highlightedStars.current]);
       setGlowingStars([...highlightedStars.current]);
@@ -83,7 +77,6 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
 
     return () => clearInterval(interval);
   }, []);
-  //usauly its empty []
 
   return (
     <div
@@ -126,13 +119,6 @@ const Star = ({ isGlowing, delay }: { isGlowing: boolean; delay: number }) => {
       initial={{
         scale: 1,
       }}
-      animate={
-        {
-          // scale: isGlowing ? [1, 1.2, 2.5, 2.2, 1.5] : 1,
-          // scale: [1, 1.2, 2.5, 2.2, 3, , 1.5],
-          // background: isGlowing ? "#fff" : "#666",
-        }
-      }
       transition={{
         duration: 4,
         ease: "easeInOut",
@@ -142,7 +128,6 @@ const Star = ({ isGlowing, delay }: { isGlowing: boolean; delay: number }) => {
         scale: 0,
       }}
       className={cn(" h-[1px] w-[1px] rounded-full relative z-20")}
-      //bg-[#666]
     ></motion.div>
   );
 };
@@ -154,22 +139,13 @@ const Glow = ({ delay }: { delay: number }) => {
         opacity: 0,
         // scale: 0,
       }}
-      animate={{
-        opacity: 1,
-        // scale: [
-        //   0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.2, 1.4, 1.5, 1.3,
-        //   1.1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0,
-        // ],
-      }}
       transition={{
-        //chage the way start chage
+        //chage the way start changes
         duration: 5.5,
-        // duration: 3,
         ease: "easeInOut",
         delay: delay,
       }}
       exit={{
-        // opacity: [1, 0.5, 0],
         opacity: 0,
         scale: 0,
       }}

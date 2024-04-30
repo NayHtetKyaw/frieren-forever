@@ -2,18 +2,14 @@ import { BackgroundBeams } from "@components/ui/background-beams";
 import frierenNotFull from "@public/output_image-removebg.png";
 import { Container, Section, Heading } from "@radix-ui/themes";
 import { cn } from "@utils/cn";
-import {
-  GlowingStarsBackgroundCard,
-  GlowingStarsDescription,
-  GlowingStarsTitle,
-} from "@components/ui/glowing-stars";
+import { GlowingStarsBackgroundCard } from "@components/ui/glowing-stars";
 
 export default function Home() {
   return (
     <GlowingStarsBackgroundCard className={cn("relave z-10")}>
       <Container className="h-full">
         <Section>
-          <Heading className="flex flex-col justify-center ">
+          <Heading className="flex flex-col justify-center z-10">
             <span className="sm:text-xl md:text-2xl lg:text-5xl font-bold self-center">
               葬送のフリーレン
             </span>
