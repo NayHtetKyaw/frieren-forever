@@ -1,6 +1,6 @@
 "use client";
 
-import {Notification } from "@mantine/core";
+// import {Notification } from "@mantine/core";
 import { createTheme, MantineProvider, Container } from "@mantine/core";
 
 const theme = createTheme({
@@ -25,7 +25,7 @@ export default function MantineWrapper({ children }: {children: React.ReactNode}
   return (
     <>
       <MantineProvider theme={theme} defaultColorScheme="dark">
-        <Notification />
+        {/* <Notification /> */}
         <Container>
           {children}
         </Container>
