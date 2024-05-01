@@ -16,10 +16,10 @@ export default function Home() {
       </Section>
 
   <section className=" flex justify-center h-[100px] ">
-  <Link href="#" className="border-2 border-white h-[65px] w-[140px] rounded-lg text-center p-2 bg-[#000] hover:bg-[#ffff] transition-color" >
+  <Link href="/aura" className=" z-10 relative border-2 border-white h-[65px] w-[140px] rounded-lg text-center p-2 hover:text-black hover:bg-[#ffff]" >
     
       CLICK TO SEE #1 WAIFU
-    
+
 </Link>
   </section>
 
