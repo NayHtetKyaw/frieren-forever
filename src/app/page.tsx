@@ -1,6 +1,7 @@
 import { BackgroundBeams } from "@components/ui/background-beams";
 import frierenNotFull from "@public/output_image-removebg.png";
 import { Container, Section, Heading } from "@radix-ui/themes"
+import Link from "next/link";
 
 
 export default function Home() {
@@ -13,6 +14,14 @@ export default function Home() {
         </Heading>
         <BackgroundBeams />
       </Section>
+
+  <section className=" flex justify-center h-[100px] ">
+  <Link href="#" className="border-2 border-white h-[65px] w-[140px] rounded-lg text-center p-2 bg-[#000] hover:bg-[#ffff] transition-color" >
+    
+      CLICK TO SEE #1 WAIFU
+    
+</Link>
+  </section>
 
       <Section
         className="absolute inset-0 z-5 "
