@@ -3,6 +3,7 @@ import frierenNotFull from "@public/output_image-removebg.png";
 import { Container, Section, Heading } from "@radix-ui/themes";
 import { cn } from "@utils/cn";
 import { GlowingStarsBackgroundCard } from "@components/ui/glowing-stars";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,6 +20,16 @@ export default function Home() {
           </Heading>
           <BackgroundBeams />
         </Section>
+
+        <Section className=" flex justify-center h-[100px] p-10">
+          <Link
+            href="/aura"
+            className=" z-10 relative border-2 border-white h-[65px] w-[140px] rounded-lg text-center p-2 hover:text-black hover:bg-[#ffff]"
+          >
+            CLICK TO SEE #1 WAIFU
+          </Link>
+        </Section>
+
 
         <Section
           className="absolute inset-0 z-5 "
