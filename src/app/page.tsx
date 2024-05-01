@@ -14,7 +14,7 @@ export default function Home() {
               葬送のフリーレン
             </span>
             <span className="sm:text-lg md:text-xl lg:text-2xl font-bold self-center">
-              Beyound Journey&apos;s End
+              Beyound Journey&apos;s End test test
             </span>
           </Heading>
           <BackgroundBeams />
