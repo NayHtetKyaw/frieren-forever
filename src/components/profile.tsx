@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
-function profile(props: any) {
+function profile() {
   const cards = [
     {
       img: "/aura_profile.png",
