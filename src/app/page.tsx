@@ -14,19 +14,20 @@ export default function Home() {
             <span className="sm:text-xl md:text-2xl lg:text-5xl font-bold self-center">
               葬送のフリーレン
             </span>
-            <span className="sm:text-lg md:text-xl lg:text-2xl font-bold self-center">
-              Beyound Journey&apos;s End test test
+            <span className="sm:text-lg md:text-xl lg:text-2xl font-bold self-center my-4">
+              Beyound Journey&apos;s End
             </span>
           </Heading>
           <BackgroundBeams />
         </Section>
 
-        <Section className=" flex justify-center h-[100px] p-10">
+        <Section className=" flex justify-center h-[100px] p-6">
           <Link
-            href="/aura"
-            className=" z-10 relative border-2 border-white h-[65px] w-[140px] rounded-lg text-center p-2 hover:text-black hover:bg-[#ffff]"
+            href="/characters"
+            className=" z-10 relative border-2 border-white h-[65px] w-[200px] rounded-lg text-center p-2 hover:text-black hover:bg-[#ffff]"
           >
-            CLICK TO SEE #1 WAIFU
+            CLICK TO SEE
+            <br></br>EVERY CHARACTERS
           </Link>
         </Section>
 
