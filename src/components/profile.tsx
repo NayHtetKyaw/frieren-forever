@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
-function profile(props: any) {
+function profile() {
   const Herocards = [
     {
       img: "/aura_profile.png",
@@ -16,8 +16,7 @@ function profile(props: any) {
       img: "/ubel_profile.png",
       name: "Ubel",
     },
-  ];  
-
+  ];
 
   return (
     <div className="flex flex-row flex-wrap justify-center ">
