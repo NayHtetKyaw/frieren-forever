@@ -10,12 +10,14 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <title>Frieren's Beyond Journy End</title>
+        <title>Frieren&apos;s Beyond Journy End</title>
         <meta></meta>
       </head>
       <body>
         <Navbar />
-        <MantineWrapper>{children}</MantineWrapper>
+        <main className="">
+          <MantineWrapper>{children}</MantineWrapper>
+        </main>
       </body>
     </html>
   );
