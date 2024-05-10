@@ -7,14 +7,17 @@ function profile() {
     {
       img: "/char-images/aura_profile.png",
       name: "Aura",
+      onClick: "",
     },
     {
       img: "/char-images/linie_profile.png",
       name: "Linie",
+      onClick: "",
     },
     {
       img: "/char-images/ubel_profile.png",
       name: "Ubel",
+      onClick: "",
     },
   ];
 
