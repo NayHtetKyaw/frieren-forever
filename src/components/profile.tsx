@@ -25,11 +25,11 @@ function profile() {
     <div className="flex flex-row flex-wrap justify-center ">
       {Herocards.map((item) => (
         <div
-          className="bg-white w-[150px] h-[150px] rounded-md mx-8 my-6 transition duration-500 hover:scale-105"
+          className="bg-white w-[150px] h-[150px] rounded-2xl mx-8 my-6 transition duration-500 hover:scale-105"
           key={uuidv4()}
         >
           <Image
-            className="rounded-md"
+            className="rounded-2xl"
             src={item.img}
             height={150}
             width={150}
