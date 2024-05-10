@@ -21,17 +21,6 @@ export default function Home() {
           <BackgroundBeams />
         </Section>
 
-        <Section className=" flex justify-center h-[100px] p-6">
-          <Link
-            href="/characters"
-            className=" z-10 relative border-2 border-white h-[65px] w-[200px] rounded-lg text-center p-2 hover:text-black hover:bg-[#ffff]"
-          >
-            CLICK TO SEE
-            <br></br>EVERY CHARACTERS
-          </Link>
-        </Section>
-
-
         <Section
           className="absolute inset-0 z-5 "
           style={{
