@@ -5,15 +5,15 @@ import { v4 as uuidv4 } from "uuid";
 function profile() {
   const Herocards = [
     {
-      img: "/aura_profile.png",
+      img: "/char-images/aura_profile.png",
       name: "Aura",
     },
     {
-      img: "/linie_profile.png",
+      img: "/char-images/linie_profile.png",
       name: "Linie",
     },
     {
-      img: "/ubel_profile.png",
+      img: "/char-images/ubel_profile.png",
       name: "Ubel",
     },
   ];
