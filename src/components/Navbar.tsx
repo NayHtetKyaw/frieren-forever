@@ -75,7 +75,7 @@ function Navbar() {
   };
 
   return (
-    <div className=" w-screen p-5 z-40 backdrop-blur-3xl drop-shadow-2xl border-b-[1px] border-[#444444]">
+    <div className=" w-screen relative p-5 z-[100] backdrop-blur-3xl drop-shadow-2xl border-b-[1px] border-[#444444]">
       <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
         {/* LINK */}
         <div className="hidden md:flex gap-4 w-1/3 text-white">
