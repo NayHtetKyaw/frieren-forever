@@ -15,13 +15,13 @@ export const GlowingStarsBackgroundCard = ({
 
   return (
     <div
-      onMouseEnter={() => {
-        // setMouseEnter(true);
-        setMouseEnter(false);
-      }}
-      onMouseLeave={() => {
-        setMouseEnter(false);
-      }}
+      // onMouseEnter={() => {
+      //   setMouseEnter(true);
+      // }}
+      // onMouseLeave={() => {
+      //   setMouseEnter(false);
+      // }}
+      className={cn("h-48 w-full rounded-xl ", className)}
     >
       <div className="flex justify-center items-center">
         <Illustration mouseEnter={mouseEnter} />
@@ -60,18 +60,18 @@ export const GlowingStarsTitle = ({
 };
 
 export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
-  const columns = 18;
-  const stars = 108;
+  const stars = 150;
+  const columns = 25;
+
   const [glowingStars, setGlowingStars] = useState<number[]>([]);
 
   const highlightedStars = useRef<number[]>([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      highlightedStars.current = Array.from({ length: 5 }, () =>
-        Math.floor(Math.random() * stars)
+      highlightedStars.current = Array.from({ length: 7 }, () =>
+        Math.floor(Math.random() * stars),
       );
-      // setGlowingStars([...highlightedStars.current]);
       setGlowingStars([...highlightedStars.current]);
     }, 3000);
 
@@ -80,7 +80,7 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
 
   return (
     <div
-      className="h-48 p-1 w-full"
+      className="h-80 p-1 w-full"
       style={{
         display: "grid",
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
@@ -89,7 +89,7 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
     >
       {[...Array(stars)].map((_, starIdx) => {
         const isGlowing = glowingStars.includes(starIdx);
-        const delay = (starIdx % 10) * 0.1;
+        const delay = (starIdx % 8) * 0.1;
         const staticDelay = starIdx * 0.01;
         return (
           <div
@@ -100,10 +100,9 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
               isGlowing={mouseEnter ? true : isGlowing}
               delay={mouseEnter ? staticDelay : delay}
             />
-            {mouseEnter && <Glow delay={staticDelay} />}
+            {mouseEnter && <Glow delay={staticDelay} isGlowing={true} />}
             <AnimatePresence mode="wait">
-              {isGlowing && <Glow delay={delay} />}
-              {/* {isGlowing && <Glow delay={delay} />} */}
+              {isGlowing && <Glow delay={delay} isGlowing={true} />}
             </AnimatePresence>
           </div>
         );
@@ -117,37 +116,48 @@ const Star = ({ isGlowing, delay }: { isGlowing: boolean; delay: number }) => {
     <motion.div
       key={delay}
       initial={{
-        scale: 1,
-      }}
-      transition={{
-        duration: 4,
-        ease: "easeInOut",
-        // delay: delay,
-      }}
-      exit={{
         scale: 0,
       }}
-      className={cn(" h-[1px] w-[1px] rounded-full relative z-20")}
+      animate={{
+        scale: isGlowing
+          ? [
+              0.1, 0.3, 0.4, 0.5, 0.6, 0.8, 1, 1.2, 1.5, 2, 1.5, 1.2, 0.6, 0.3,
+              0.1, 0,
+            ]
+          : 0,
+        background: isGlowing ? "#fff" : "#000000",
+      }}
+      transition={{
+        duration: 4.3,
+        ease: "easeInOut",
+        delay: delay,
+      }}
+      className={cn("bg-[#666] h-[1px] w-[1px] rounded-full relative z-20")}
     ></motion.div>
   );
 };
 
-const Glow = ({ delay }: { delay: number }) => {
+const Glow = ({ delay, isGlowing }: { delay: number; isGlowing: boolean }) => {
   return (
     <motion.div
       initial={{
         opacity: 0,
-        // scale: 0,
+      }}
+      animate={{
+        opacity: isGlowing
+          ? [
+              0.1, 0.3, 0.4, 0.5, 0.6, 0.8, 1, 1.2, 1.5, 2, 1.5, 1.2, 0.6, 0.3,
+              0.1, 0,
+            ]
+          : 0,
       }}
       transition={{
-        //chage the way start changes
-        duration: 5.5,
+        duration: 4,
         ease: "easeInOut",
         delay: delay,
       }}
       exit={{
         opacity: 0,
-        scale: 0,
       }}
       className="absolute  left-1/2 -translate-x-1/2 z-10 h-[4px] w-[4px] rounded-full bg-blue-500 blur-[1px] shadow-2xl shadow-blue-400"
     />
