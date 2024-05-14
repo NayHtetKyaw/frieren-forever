@@ -8,7 +8,7 @@ function page() {
     // Characters contents
     <section>
       <div className={platypi.className}>
-        <h1 className="text-center text-[50px] font-bold tracking-widest">
+        <h1 className="text-center text-[50px] font-bold tracking-widest mt-8">
           CHARACTERS
         </h1>
         <p className="text-center text-[30px] my-5">Hero&apos;s Party</p>
