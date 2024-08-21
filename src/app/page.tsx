@@ -12,10 +12,10 @@ export default function Home() {
         <Section>
           <Heading className="flex flex-col justify-center z-10">
             <span className="sm:text-xl md:text-2xl lg:text-5xl font-bold self-center">
-              葬送のフリーレン
+              葬送のフリーレン (DISCONTINUED)
             </span>
             <span className="sm:text-lg md:text-xl lg:text-2xl font-bold self-center my-4">
-              Beyound Journey&apos;s End
+              Beyound Journey&apos;s End (REALLY END)
             </span>
           </Heading>
           <BackgroundBeams />
